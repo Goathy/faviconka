@@ -1,0 +1,11 @@
+#!/bin/sh
+
+URL="$1"
+SIZE="$2"
+TARGET="https://t1.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=$URL&size=$SIZE"
+
+curl \
+    --request "GET" \
+    --url $TARGET \
+    --silent \
+    --output -
